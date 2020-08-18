@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/ic_dashboard_bg">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/layout_h3"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/fb_challenge_back"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_back_arrow" />
+
+
+        <TextView
+            android:id="@+id/fb_workout_view_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Challenge"
+            android:layout_marginLeft="@dimen/layout_h4"
+            android:textSize="@dimen/text_body"
+            android:layout_gravity="center"
+            android:fontFamily="@font/fira_sans_bold"
+            android:textColor="@color/colorWhite"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginRight="@dimen/layout_h3"
+                android:src="@drawable/ic_profile_settings"/>
+            <ImageView
+                android:id="@+id/txt_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_profile_tool"/>
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/layout_h3">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="@dimen/layout_h4"
+            android:background="@color/colorTransparent"
+            app:cardCornerRadius="15dp">
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+
+                <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+                    android:id="@+id/fb_blog_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/ic_challenge_view"
+                    android:scaleType="centerCrop"/>
+                <LinearLayout
+                    android:id="@+id/progress_bar_layout"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="200dp"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+                    android:orientation="vertical"
+                    android:layout_width="50dp"
+                    android:gravity="center"
+                    android:layout_height="50dp">
+                    <com.pnikosis.materialishprogress.ProgressWheel
+                        android:id="@+id/progressBargreen"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_centerInParent="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        wheel:matProg_fillRadius="true"
+                        wheel:matProg_barColor="@color/colorMajor"
+                        wheel:matProg_progressIndeterminate="true" />
+                    <com.pnikosis.materialishprogress.ProgressWheel
+                        android:id="@+id/progressBarBlue"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_centerInParent="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:visibility="visible"
+                        wheel:matProg_fillRadius="true"
+                        wheel:matProg_barColor="@color/colorMajorblue"
+                        wheel:matProg_progressIndeterminate="true" />
+                </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="80dp"
+                    android:visibility="gone"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                       android:adjustViewBounds="true"
+          android:scaleType="fitXY"
+                        android:src="@drawable/ic_play" />
+                </LinearLayout>
+
+
+
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/layout_h3">
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:textSize="@dimen/text_body"
+            android:layout_gravity="center"
+            android:fontFamily="@font/fira_sans_bold"
+            android:textColor="@color/colorWhite"/>
+
+        <TextView
+            android:id="@+id/txt_title_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_h4"
+            android:textSize="@dimen/text_caption"
+            android:layout_gravity="center"
+            android:fontFamily="@font/fira_sans"
+            android:textColor="@color/colorWhite"/>
+
+        <TextView
+            android:id="@+id/txt_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_h4"
+            android:text="1200"
+            android:textSize="@dimen/text_title"
+            android:padding="@dimen/layout_h4"
+            android:layout_gravity="center"
+            android:gravity="end"
+            android:drawableRight="@drawable/coins"
+            android:drawablePadding="@dimen/layout_h4"
+            android:fontFamily="@font/fira_sans"
+            android:textColor="@color/colorMajor"/>
+
+        <Button
+            android:id="@+id/btn_fb_challenge"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="@dimen/layout_h1"
+            android:layout_marginBottom="@dimen/layout_h1"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:padding="4dp"
+            android:text="Challenge akzeptieren"
+            android:fontFamily="@font/fira_sans_bold"
+            android:textSize="@dimen/text_subbody"
+            android:background="@drawable/ic_button_bg"
+            android:textColor="@color/colorBlack"
+            android:textAllCaps="false"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/layout_h3">
+
+    <LinearLayout
+        android:id="@+id/ranklayouttitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/fb_challenge_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_rank_1" />
+
+
+        <TextView
+            android:id="@+id/fb_challenge_rank_place"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Platz 1"
+            android:layout_marginLeft="@dimen/layout_h4"
+            android:textSize="@dimen/text_body"
+            android:layout_gravity="center"
+            android:fontFamily="@font/fira_sans_bold"
+            android:textColor="@color/colorWhite"/>
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/layout_rank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:padding="4dp"
+                android:backgroundTint="@color/colorTransparent"
+                android:layout_margin="@dimen/layout_h1"
+                android:layout_gravity="center"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/cv_one_login"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/vendor_ads_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_profile_img"/>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:id="@+id/fb_challenge_member_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Kevin McDonald"
+                        android:textAlignment="center"
+                        android:layout_marginLeft="@dimen/layout_h4"
+                        android:textSize="12dp"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/fira_sans_bold"
+                        android:textColor="@color/colorWhite"/>
+
+
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="5dp"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/popup_background"
+            android:layout_below="@id/cv_one_login"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:src="@drawable/ic_favorite_off"
+            android:layout_marginTop="-195dp"
+            android:elevation="15dp" />
+
+
+    </LinearLayout>
+    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layoutranklist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/layout_h3">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/fb_challenge_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_challenge_view_img" />
+
+
+                <TextView
+                    android:id="@+id/fb_challenge_list_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Teilnehmer"
+                    android:layout_marginLeft="@dimen/layout_h4"
+                    android:textSize="@dimen/text_body"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/fira_sans_bold"
+                    android:textColor="@color/colorWhite"/>
+
+
+
+
+
+
+
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/gridView1"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/layout_h4"
+                android:layout_height="750dp"
+                android:gravity="center"
+                android:numColumns="2"
+                android:nestedScrollingEnabled="true"
+                android:scrollbars="none">
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

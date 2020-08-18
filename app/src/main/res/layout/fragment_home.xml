@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/ic_dashboard_bg">
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/layout_h3">
+
+
+        <TextView
+            android:id="@+id/fb_home_tv_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hallo, "
+            android:textSize="20dp"
+            android:textColor="@color/colorWhite"
+            android:textAlignment="center"
+            app:fontFamily="@font/fira_sans_light" />
+        <TextView
+            android:id="@+id/fb_home_tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jürgen"
+            android:textSize="20dp"
+            android:textColor="@color/colorWhite"
+            android:textAlignment="center"
+            app:fontFamily="@font/fira_sans_bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/layout_h3"
+            android:layout_weight="1"
+            android:gravity="end">
+       <!--     <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/layout_h3"
+                android:layout_weight="1"
+                android:gravity="end">
+            <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                android:id="@+id/circularProgressBar"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:cpb_background_progressbar_color="#b6bbd8"
+                app:cpb_background_progressbar_width="5dp"
+                app:cpb_progress_direction="to_right"
+                app:cpb_progressbar_color="#3f51b5"
+                app:cpb_progressbar_width="10dp"
+                android:layout_gravity="end"
+                app:cpb_round_border="false" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/layout_h3"
+                android:layout_weight="1"
+                android:gravity="end">
+            <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                android:id="@+id/circularProgressBar1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:cpb_background_progressbar_color="#b6bbd8"
+                app:cpb_background_progressbar_width="5dp"
+                app:cpb_progress_direction="to_right"
+                app:cpb_progressbar_color="#3f51b5"
+                app:cpb_progressbar_width="10dp"
+                android:layout_gravity="end"
+                app:cpb_round_border="false" />
+            </LinearLayout>-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+           <!--     <com.bikomobile.donutprogress.DonutProgress
+                    android:id="@+id/donut_progress"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerInParent="true"
+                    android:indeterminate="false"
+                    custom:donut_finished_stroke_width="5dp"
+                    custom:donut_unfinished_stroke_width="5dp"
+
+                    custom:donut_text_size="14sp"
+                    custom:donut_text_color="@color/colorTextPrimary"
+                    custom:donut_unfinished_color="@color/colorMajor_light"
+                    custom:donut_finished_color="@color/colorMajor"
+                    />-->
+           <!--     <com.bikomobile.donutprogress.DonutProgress
+                    android:id="@+id/progressgreen"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerInParent="true"
+                    android:indeterminate="false"
+                    app:donut_unfinished_color="@color/colorMajor_light"
+                    app:cpb_background_progressbar_width="5dp"
+                    app:cpb_progress_direction="to_right"
+                    app:donut_finished_color="@color/colorMajor"
+                    app:cpb_round_border="true"
+                    app:cpb_progressbar_width="10dp"/>
+                <com.bikomobile.donutprogress.DonutProgress
+                    android:id="@+id/progressblue"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:indeterminate="true"
+                    app:cpb_background_progressbar_color="@color/colorMajorblue_light"
+                    app:cpb_background_progressbar_width="5dp"
+                    app:cpb_progress_direction="to_right"
+                    app:cpb_progressbar_color="@color/colorMajorblue"
+                    app:cpb_round_border="true"
+                    app:cpb_progressbar_width="10dp" />-->
+
+                        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                    android:id="@+id/progressgreen"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerInParent="true"
+                    android:indeterminate="false"
+                    app:cpb_background_progressbar_color="@color/colorMajor_light"
+                    app:cpb_background_progressbar_width="10dp"
+                    app:cpb_progress_direction="to_right"
+                    app:cpb_progressbar_color="@color/colorMajor"
+                    app:cpb_round_border="true"
+                    app:cpb_progressbar_width="10dp"/>
+                <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                    android:id="@+id/progressblue"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:indeterminate="true"
+                    app:cpb_background_progressbar_color="@color/colorMajorblue_light"
+                    app:cpb_background_progressbar_width="10dp"
+                    app:cpb_progress_direction="to_right"
+                    app:cpb_progressbar_color="@color/colorMajorblue"
+                    app:cpb_round_border="true"
+                    app:cpb_progressbar_width="10dp" />
+            </RelativeLayout>
+    </LinearLayout>
+
+
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="@dimen/layout_h3"
+            android:layout_marginTop="-70dp">
+        <EditText
+            android:id="@+id/fb_home_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Suche nach Programmen.."
+            android:fontFamily="@font/fira_sans"
+            android:textColor="@color/colorWhite"
+            android:maxLength="10"
+            android:drawableLeft="@drawable/ic_search_icon"
+            android:drawablePadding="@dimen/layout_h4"
+android:visibility="invisible"
+            android:textColorHint="#454D62"
+            android:background="@drawable/ic_search_bg"
+            android:textSize="@dimen/text_caption"/>
+    </LinearLayout>
+
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:layout_marginTop="40dp"
+       android:layout_marginLeft="@dimen/layout_h3"
+       android:layout_marginRight="@dimen/layout_h3">
+
+       <LinearLayout
+           android:id="@+id/fb_home_main_program"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:gravity="center"
+           android:background="@drawable/ic_dashbaord_button_bg"
+           android:layout_weight="1">
+
+
+
+           <ImageView
+               android:id="@+id/fb_img_main_program"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:layout_marginRight="@dimen/layout_h4"
+               android:src="@drawable/ic_mein_program"/>
+
+           <TextView
+               android:id="@+id/fb_tv_main_program"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Mein Programm"
+               android:fontFamily="@font/fira_sans"
+               android:textSize="@dimen/text_caption"
+               android:textColor="@color/colorWhite"/>
+       </LinearLayout>
+
+
+
+
+
+       <LinearLayout
+           android:id="@+id/fb_home_sub_program"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="@drawable/ic_dashbaord_button_bg"
+           android:gravity="center"
+           android:layout_weight="1">
+
+
+
+           <ImageView
+               android:id="@+id/fb_img_sub_program"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:layout_marginRight="@dimen/layout_h4"
+               android:src="@drawable/ic_sub_program"/>
+
+           <TextView
+               android:id="@+id/fb_tv_sub_program"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Übersicht"
+               android:fontFamily="@font/fira_sans"
+               android:textSize="@dimen/text_caption"
+               android:textColor="@color/colorWhite"/>
+       </LinearLayout>
+
+
+
+
+   </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/layout_h3">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/fb_home_main_program_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+
+        </LinearLayout>
+         <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+
+       android:scrollbars="none">
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/fb_home_sub_program_tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabMode="scrollable"
+                app:tabGravity="fill"
+                app:tabIndicator="@color/colorMajor"/>
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/fb_home_sub_program_view_pager"
+                android:layout_width="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:layout_height="500dp"
+               />
+
+
+        </LinearLayout>
+
+         </ScrollView>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

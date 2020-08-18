@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:background="@drawable/ic_comm_txt_bg"
+    android:id="@+id/linear_community_cat"
+
+    android:layout_height="wrap_content"
+    >
+<ImageView
+    android:id="@+id/img_group_icon"
+    android:layout_width="16dp"
+    android:layout_height="16dp"
+    android:layout_gravity="center"
+   android:adjustViewBounds="true"
+          android:scaleType="fitXY"
+    android:backgroundTint="@color/colorTransparent"
+    android:src="@drawable/ic_nutrition_img"/>
+    <TextView
+        android:id="@+id/fb_comm_nutrition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ernährung"
+
+        android:drawablePadding="@dimen/layout_h4"
+        android:drawableRight="@drawable/ic_right_arrow"
+
+        android:layout_margin="@dimen/layout_h4"
+        android:fontFamily="@font/fira_sans_bold"
+        android:textColor="#8992AA"
+        android:textSize="@dimen/text_subbody"/>
+</LinearLayout>

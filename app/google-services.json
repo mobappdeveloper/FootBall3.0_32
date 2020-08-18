@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "272004924452",
+    "firebase_url": "https://football-3-1574522226306.firebaseio.com",
+    "project_id": "football-3-1574522226306",
+    "storage_bucket": "football-3-1574522226306.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:272004924452:android:102b4d6b9dfd0f7f7684b1",
+        "android_client_info": {
+          "package_name": "com.footballio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "272004924452-gflaooiutha1ukgvp90r0hleml74lhbb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.footballio",
+            "certificate_hash": "ebe41a2c5e9cb9ba7cca809d622c99fdf4526f36"
+          }
+        },
+        {
+          "client_id": "272004924452-uruk80du40sea9e3n1dd2dhbrjr4p2ps.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.footballio",
+            "certificate_hash": "4f6e1e1aa9a06ead6cc10072c57921320a5de393"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5MSPJFyzzeAp9XE3iSiu2zWU-PJmxaKw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "272004924452-jkkg8ml8mf3gs1ubvn6l53dgu6hrug7j.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "272004924452-q3kl0svfjudj5g8ete3041l1bijvcl8j.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.WebglobicTechnologies.football"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

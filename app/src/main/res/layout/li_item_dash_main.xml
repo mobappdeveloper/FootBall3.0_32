@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:backgroundTint="@color/colorTransparent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+           android:adjustViewBounds="true"
+          android:scaleType="fitXY"
+            android:layout_marginBottom="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/ic_group_69867"
+            android:elevation="10dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="@dimen/layout_h4"
+        android:backgroundTint="@color/colorTransparent"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentBottom="true"
+        app:cardCornerRadius="20dp">
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:backgroundTint="@color/colorTransparent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/fb_workout_view_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/ic_grid"
+               android:adjustViewBounds="true"
+          android:scaleType="fitXY"/>
+
+
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_gravity="center|bottom"
+            android:visibility="gone"
+            android:background="@drawable/ic_grid_end_color">
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/layout_h4"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/fb_workout_view_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hot Wingersrdgergretrexdfgdfgdfgfdgdfgzxvzvxcvxv"
+            android:layout_marginLeft="@dimen/layout_h4"
+            android:textSize="12dp"
+            android:maxLength="13"
+            android:maxLines="20"
+            android:layout_gravity="center"
+            android:fontFamily="@font/fira_sans_bold"
+            android:textColor="@color/colorWhite"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:gravity="end"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/fitness"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:alpha="0.6"
+                android:layout_marginLeft="@dimen/layout_h4"
+                android:textSize="@dimen/text_subbody"
+                android:layout_gravity="center"
+                android:backgroundTint="#00C476"
+                android:textAlignment="center"
+                android:background="@drawable/ic_view_count_bg"
+                android:fontFamily="@font/fira_sans_bold"
+                android:textColor="@color/colorWhite"/>
+            <TextView
+                android:id="@+id/technique"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:alpha="0.6"
+                android:layout_marginLeft="@dimen/layout_h4"
+                android:textAlignment="center"
+                android:backgroundTint="#FFEA00"
+                android:textSize="@dimen/text_subbody"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_view_count_bg"
+                android:fontFamily="@font/fira_sans_bold"
+                android:textColor="@color/colorWhite"/>
+            <TextView
+                android:id="@+id/body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:alpha="0.6"
+                android:textAlignment="center"
+                android:backgroundTint="#FF0006"
+                android:layout_marginLeft="@dimen/layout_h4"
+                android:textSize="@dimen/text_subbody"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_view_count_bg"
+                android:fontFamily="@font/fira_sans_bold"
+                android:textColor="@color/colorWhite"/>
+            <TextView
+                android:id="@+id/mental"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4"
+                android:alpha="0.6"
+                android:layout_marginLeft="@dimen/layout_h4"
+                android:textSize="@dimen/text_subbody"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:backgroundTint="#0086FF"
+                android:background="@drawable/ic_view_count_bg"
+                android:fontFamily="@font/fira_sans_bold"
+                android:textColor="@color/colorWhite"/>
+            <TextView
+                android:id="@+id/health"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:alpha="0.6"
+                android:textAlignment="center"
+                android:background="@drawable/ic_view_count_bg"
+                android:layout_marginLeft="@dimen/layout_h4"
+                android:textSize="@dimen/text_subbody"
+                android:layout_gravity="center"
+                android:backgroundTint="#FF7E01"
+                android:fontFamily="@font/fira_sans_bold"
+                android:textColor="@color/colorWhite"/>
+            <TextView
+                android:id="@+id/behaviour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6"
+                android:alpha="0.6"
+                android:textAlignment="center"
+                android:background="@drawable/ic_view_count_bg"
+                android:layout_marginLeft="@dimen/layout_h4"
+                android:textSize="@dimen/text_subbody"
+                android:layout_gravity="center"
+                android:fontFamily="@font/fira_sans_bold"
+                android:textColor="@color/colorWhite"/>
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+</LinearLayout>

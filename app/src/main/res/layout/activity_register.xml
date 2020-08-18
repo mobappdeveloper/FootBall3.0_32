@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_register_bg">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
+
+
+
+
+
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/fb_register_back"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="17dp"
+            android:src="@drawable/ic_back_arrow"
+            android:layout_margin="@dimen/layout_h2"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Anmelden"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:textColor="@color/colorWhite"
+            android:fontFamily="@font/fira_sans_bold"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/layout_h3">
+
+        <EditText
+            android:id="@+id/fb_register_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorDarkGray"
+            android:textSize="@dimen/text_body"
+            android:inputType="text"
+            android:maxLength="30"
+            android:maxLines="1"
+            android:padding="@dimen/layout_h3"
+            android:drawableLeft="@drawable/ic_user_name"
+            android:drawablePadding="@dimen/layout_h3"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorDarkGray"
+            android:fontFamily="@font/fira_sans_bold"
+            android:hint="Benutzername"/>
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/layout_h3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <EditText
+                android:id="@+id/fb_register_first_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorDarkGray"
+                android:textSize="@dimen/text_body"
+                android:inputType="text"
+                android:maxLength="10"
+                android:maxLines="1"
+                android:padding="@dimen/layout_h3"
+                android:drawableLeft="@drawable/ic_user_name"
+                android:drawablePadding="@dimen/layout_h3"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorDarkGray"
+                android:fontFamily="@font/fira_sans_bold"
+                android:hint="Vorname">
+            </EditText>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+        <EditText
+            android:id="@+id/fb_register_last_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorDarkGray"
+            android:textSize="@dimen/text_body"
+            android:inputType="text"
+            android:maxLength="10"
+            android:maxLines="1"
+            android:padding="@dimen/layout_h3"
+            android:drawablePadding="@dimen/layout_h3"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorDarkGray"
+            android:fontFamily="@font/fira_sans_bold"
+            android:hint="Nachname">
+        </EditText>
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/layout_h3">
+
+        <EditText
+            android:id="@+id/fb_register_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorDarkGray"
+            android:textSize="@dimen/text_body"
+            android:inputType="textPassword"
+            android:maxLength="30"
+            android:maxLines="1"
+            android:padding="@dimen/layout_h3"
+            android:drawableLeft="@drawable/ic_password_register_icon"
+            android:drawablePadding="@dimen/layout_h3"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorDarkGray"
+            android:fontFamily="@font/fira_sans_bold"
+            android:hint="Passwort"/>
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/layout_h3">
+
+        <EditText
+            android:id="@+id/fb_register_confirm_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorDarkGray"
+            android:textSize="@dimen/text_body"
+            android:inputType="textPassword"
+            android:maxLength="30"
+            android:maxLines="1"
+            android:padding="@dimen/layout_h3"
+            android:drawableLeft="@drawable/ic_password_register_icon"
+            android:drawablePadding="@dimen/layout_h3"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorDarkGray"
+            android:fontFamily="@font/fira_sans_bold"
+            android:hint="Passwort bestätigen"/>
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/layout_h3">
+
+        <EditText
+            android:id="@+id/fb_register_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorDarkGray"
+            android:textSize="@dimen/text_body"
+            android:inputType="textEmailAddress"
+            android:maxLength="30"
+            android:maxLines="1"
+            android:padding="@dimen/layout_h3"
+            android:drawableLeft="@drawable/ic_email_register_icon"
+            android:drawablePadding="@dimen/layout_h3"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorDarkGray"
+            android:fontFamily="@font/fira_sans_bold"
+            android:hint="E-Mail Adresse"/>
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/layout_h3">
+
+        <CheckBox
+            android:id="@+id/fb_register_terms_conditions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorMajor"
+            android:textColor="#454D62"
+            android:padding="4dp"
+            android:textSize="@dimen/text_caption"
+            android:text="Durch die Erstellung deines Kontos akzeptierst du die Nutzungsbedingungen, Datenschutzbestimmungen und Verbrauchervereinbarungen."/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_margin="@dimen/layout_h3"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/btn_fb_register"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Anmelden"
+            android:fontFamily="@font/fira_sans_bold"
+            android:textSize="@dimen/text_subbody"
+            android:background="@drawable/ic_button_bg"
+            android:textColor="@color/colorBlack"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="60dp"/>
+   </LinearLayout>
+    </ScrollView>
+   </LinearLayout>

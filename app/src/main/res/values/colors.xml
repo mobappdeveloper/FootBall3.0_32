@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2B2E43</color>
+    <color name="colorPrimaryDark">#2B2E43</color>
+    <color name="colorAccent">#2B2E43</color>
+    <color name="colorTransparent">#00000000</color>
+    <color name="colorBg">#F7F7F7</color>
+    <color name="colorDarkGray">#707070</color>
+    <color name="colorMajor">#00FE7F</color>
+    <color name="colorYellow">#FEE833</color>
+    <color name="colorRedC">#FC0C1E</color>
+    <color name="colorOrgange">#FD7D22</color>
+    <color name="colorlander">#9E25FB</color>
+    <color name="colorlander_light">#3E1D67</color>
+    <color name="colorOrgange_light">#5A3624</color>
+    <color name="colorYellow_light">#605D32</color>
+    <color name="colorRedC_light">#621D2F</color>
+    <color name="colorMajor_light">#1E6D4E</color>
+    <color name="colorMajorblue_light">#225870</color>
+    <color name="colorMajorblue">#06B5FE</color>
+    <color name="colorunSelected">#3E4346</color>
+    <color name="colorGray">#808080</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorGreen">#00FF00</color>
+    <color name="colorRed">#E22123</color>
+    <color name="co1lorRed">#727272</color>
+    <color name="transparent">#00000000</color>
+    <color name="text_highlight">#00FE7F</color>
+    <color name="bg_comm_btn">#454D62</color>
+</resources>

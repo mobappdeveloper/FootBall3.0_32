@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/layout_h4"
+    android:backgroundTint="@color/colorTransparent"
+    android:layout_width="wrap_content"
+    android:layout_height="500dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:backgroundTint="@color/colorTransparent"
+        android:id="@+id/card_category"
+        app:cardCornerRadius="10dp">
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/colorTransparent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/fb_view_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_grid"
+                android:backgroundTint="@color/colorTransparent"
+                android:visibility="visible"
+               android:adjustViewBounds="true"
+          android:scaleType="fitXY"/>
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_gravity="center|bottom"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:background="@drawable/image_color">
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_gravity="center|bottom"
+            android:padding="16dp"
+            android:backgroundTint="@color/colorTransparent"
+            android:orientation="vertical"
+
+           >
+            <ImageView
+                android:id="@+id/img_favourite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:src="@drawable/ic_favorite_off"
+             />
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="title"
+                android:textSize="18dp"
+                android:gravity="left|bottom"
+                android:layout_marginTop="90dp"
+                android:layout_weight="1"
+                android:textColor="@color/colorWhite"
+                android:fontFamily="@font/fira_sans_medium"/>
+
+            <TextView
+                android:id="@+id/txt_desc1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="shdvuhsadjbjhasbdbasdhbasdbhjasbdjkasbdjasbdjasbdjiasbdjasbdjabsdjbasjdbjasbdkjbasdbjkasbjkasbdkjbdajksbdkjasbdkjasbdkjasbdjkasbdjkbaskjdbasjdbdsafsdfsdfsdfsdfdssddfgdfgfdgdfgdfgdfgdfgfdgfdgdfgdfgdfgfdfdgdfgdfgdfgdfgdfgdfgdfdfgf"
+                android:textSize="12dp"
+                android:gravity="start"
+                android:paddingTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_weight="1"
+                android:maxLines="4"
+                android:textColor="@color/colorWhite"
+                android:fontFamily="@font/fira_sans_medium"/>
+            <TextView
+                android:id="@+id/btn_name"
+                android:layout_width="120dp"
+                android:layout_height="25dp"
+                android:text="jetzt anzeigen"
+                android:textSize="10dp"
+                android:gravity="center"
+                android:background="@drawable/textview_btn"
+                android:textColor="@color/colorWhite"
+                android:fontFamily="@font/fira_sans_medium"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

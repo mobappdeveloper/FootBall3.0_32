@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+
+    <!--Layout Design-->
+    <dimen name="layout_h1">32dp</dimen>
+    <dimen name="layout_h2">24dp</dimen>
+    <dimen name="layout_h3">16dp</dimen>
+    <dimen name="layout_h4">8dp</dimen>
+    <dimen name="layout_h5">4dp</dimen>
+    <dimen name="layout_h6">2dp</dimen>
+    <dimen name="layout_h7">1dp</dimen>
+
+    <dimen name="layout_h2_sub">20dp</dimen>
+    <dimen name="layout_h3_sub">12dp</dimen>
+    <dimen name="layout_h3_sub1">150dp</dimen>
+
+    <!--Image Size-->
+    <dimen name="image_layout_h1">72dp</dimen>
+    <dimen name="image_layout_h2">64dp</dimen>
+    <dimen name="image_layout_h3">48dp</dimen>
+
+    <dimen name="image_navaction_icon">18dp</dimen>
+    <dimen name="image_action_icon">24dp</dimen>
+    <dimen name="image_common_icon">48dp</dimen>
+
+    <!--Button-->
+    <dimen name="button_height">36dp</dimen>
+    <dimen name="button_layout_height">52dp</dimen>
+    <dimen name="button_dialog_height">24dp</dimen>
+    <dimen name="button_layout_dialog_height">40dp</dimen>
+
+    <!--General-->
+    <dimen name="status_bar">24dp</dimen>
+    <dimen name="app_bar">56dp</dimen>
+    <dimen name="list_item">88dp</dimen>
+
+    <!--RecycleView-->
+    <dimen name="recycleview_item_height">48dp</dimen>
+    <dimen name="recycleview_dialog_height">32dp</dimen>
+
+    <dimen name="mobile_margin">16dp</dimen>
+    <dimen name="tab_margin">24dp</dimen>
+
+
+    <!--Text Design-->
+    <dimen name="text_h1">96sp</dimen>
+    <dimen name="text_h2">60sp</dimen>
+    <dimen name="text_h3">48sp</dimen>
+    <dimen name="text_h4">34sp</dimen>
+    <dimen name="text_h5">24sp</dimen>
+    <dimen name="text_h6">20sp</dimen>
+    <dimen name="text_title">18sp</dimen>
+    <dimen name="text_subtitle">14sp</dimen>
+    <dimen name="text_body">16sp</dimen>
+    <dimen name="text_subbody">14sp</dimen>
+    <dimen name="text_widget">14sp</dimen>
+    <dimen name="text_caption">12sp</dimen>
+    <dimen name="text_overline">10sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+
+    <dimen name="padding_small">5dp</dimen>
+    <dimen name="margin_large">10dp</dimen>
+    <dimen name="margin_xlarge">30dp</dimen>
+
+    <dimen name="buy_button_width">300dp</dimen>
+    <dimen name="buy_button_height">48sp</dimen>
+    <dimen name="buy_button_min_width">200dp</dimen>
+</resources>
