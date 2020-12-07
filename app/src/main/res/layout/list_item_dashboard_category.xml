@@ -87,7 +87,6 @@ android:background="@color/colorTransparent"
                 android:paddingLeft="4dp"
                 android:paddingRight="4dp"
                 android:gravity="center"
-                android:background="@drawable/textview_btn"
                 android:textColor="@color/colorWhite"
                 android:fontFamily="@font/fira_sans_medium"/>
 

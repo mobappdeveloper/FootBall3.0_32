@@ -1,4 +1,4 @@
-package com.footballio.view;
+package com.footballio.view.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,6 +17,7 @@ import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import com.footballio.R;
+import com.footballio.Utils.AppConst;
 import com.footballio.Utils.Utils;
 import com.footballio.databinding.ActivityLoginOptionBinding;
 import com.footballio.model.login.User;
@@ -39,7 +40,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import dagger.hilt.android.AndroidEntryPoint;
 
+@AndroidEntryPoint
 public class LoginOptionActivity extends AppCompatActivity implements View.OnClickListener {
     // FB
     private CallbackManager callbackManager;
@@ -48,7 +51,7 @@ public class LoginOptionActivity extends AppCompatActivity implements View.OnCli
     private static final String PROFILE = "public_profile";
     private AccessTokenTracker accessTokenTracker;
     private ProfileTracker profileTracker;
-    //GMAIL
+    //GOOGLE
     private static final int RC_SIGN_IN = 120;
     private GoogleSignInClient mGoogleSignInClient;
     private SignInButton gmailSignInButton;
@@ -66,13 +69,39 @@ public class LoginOptionActivity extends AppCompatActivity implements View.OnCli
         setupFaceBook();
         setupGmail();
         setupButtonClick();
-        login.getErrorMessage().observe(this, new Observer<String>() {
+        login.getErrorResponse().observe(this, new Observer<String>() {
             @Override
             public void onChanged(String s) {
-
                 Utils.showToast(s, LoginOptionActivity.this);
             }
         });
+
+        login.getSuccessResponse().observe(this, new Observer<User>() {
+            @Override
+            public void onChanged(User user) {
+                if (user != null) {
+                    startActivity(new Intent(LoginOptionActivity.this, VerifyEmailCodeActivity.class)
+                            //.putExtra("FirstTimeRegistration", "0")
+                            //.putExtra("Logintype", user.getLogintype())
+                            .putExtra(AppConst.LOGIN_BUNDLE, getUserDetails(user)));
+                    //.putExtra("email", user.getEmailAddress()));
+                } else {
+                    Utils.showToast("Error", LoginOptionActivity.this);
+                }
+            }
+        });
+
+    }
+
+    private Bundle getUserDetails(User user) {
+        Bundle bundle = new Bundle();
+        bundle.putString(AppConst.FN, user.getFirstName());
+        bundle.putString(AppConst.LN, user.getLastName());
+        bundle.putString(AppConst.UN, user.getUserName());
+        bundle.putInt(AppConst.UID, user.getId());
+        bundle.putInt(AppConst.LOGIN_TYPE, user.getLogintype());
+        bundle.putString(AppConst.EM, user.getEmailAddress());
+        return bundle;
     }
 
     private void setUpBinding() {
@@ -80,6 +109,7 @@ public class LoginOptionActivity extends AppCompatActivity implements View.OnCli
         login = new ViewModelProvider(this).get(LoginViewModel.class);
         loginOptionBinding.setLogin(login);
         loginOptionBinding.setLifecycleOwner(this);
+        login.initLoginOptionLiveData();
     }
 
     private void setupButtonClick() {
@@ -111,8 +141,7 @@ public class LoginOptionActivity extends AppCompatActivity implements View.OnCli
         setupFacebookSDK();
         acessTokenTracker();
         getProfileTracker();
-        callBackLoginManager();
-        callBackFacebook();
+        //callBackLoginManager();
     }
 
     private void intFacebookUI() {
@@ -179,10 +208,7 @@ public class LoginOptionActivity extends AppCompatActivity implements View.OnCli
         loginOptionBinding.loginbutton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
-                Log.d(TAG, "onSuccess:registration loginResult" + new Gson().toJson(loginResult));
-                boolean loggedIn = AccessToken.getCurrentAccessToken() == null;
-                Log.d(TAG, "onSuccess:registration loginResult " + loggedIn + " ??");
-                getUserdetails();
+                getFacebookLoginUserBasicInfo();
             }
 
             @Override
@@ -200,13 +226,19 @@ public class LoginOptionActivity extends AppCompatActivity implements View.OnCli
         });
     }
 
-    private void getUserdetails() {
-        login.getFacebookUserDetails(AccessToken.getCurrentAccessToken()).observe(this, new Observer<User>() {
-            @Override
-            public void onChanged(User user) {
-                login.createRegistration(user);
-            }
-        });
+    private void getFacebookLoginUserBasicInfo() {
+        AccessToken token = AccessToken.getCurrentAccessToken();
+        if (token != null) {
+            login.getFacebookUserDetails(token).observe(this, new Observer<User>() {
+                @Override
+                public void onChanged(User user) {
+                    login.createRegistration(user);
+                }
+            });
+        } else {
+            Utils.showToast("Error Validating Facebook Login", LoginOptionActivity.this);
+        }
+
     }
 
 
@@ -272,11 +304,11 @@ public class LoginOptionActivity extends AppCompatActivity implements View.OnCli
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
         //FirebaseUser currentUser = mAuth.getCurrentUser();
-        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
-        if (account != null) {
-            startActivity(new Intent(LoginOptionActivity.this, DashboardActivity.class));
-            finish();
-        }
+//        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
+//        if (account != null) {
+//            startActivity(new Intent(LoginOptionActivity.this, DashboardActivity.class));
+//            finish();
+//        }
 
     }
 
@@ -287,7 +319,7 @@ public class LoginOptionActivity extends AppCompatActivity implements View.OnCli
         profileTracker.stopTracking();
         deleteAccessToken();
         signOut();
-        login.getErrorMessage().removeObservers(this);
+        //login.getErrorMessage().removeObservers(this);
     }
 
     @Override
@@ -314,9 +346,8 @@ public class LoginOptionActivity extends AppCompatActivity implements View.OnCli
                 Profile profile = Profile.getCurrentProfile().getCurrentProfile();
                 if (profile != null) {
                     LoginManager.getInstance().logOut();
-                    // user has logged in
-                    Log.d(TAG, "onClick:fb_logout facebook ");
                 }
+                callBackFacebook();
                 facebookLoginButton.performClick();
                 break;
             case R.id.linearLayout_gmail:
@@ -330,5 +361,13 @@ public class LoginOptionActivity extends AppCompatActivity implements View.OnCli
         }
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
 }

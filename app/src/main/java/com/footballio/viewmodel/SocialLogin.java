@@ -1,4 +1,5 @@
 package com.footballio.viewmodel;
 
-public interface SocialLogin {
+public interface SocialLogin extends IFacebook, IGmail {
 }
+

@@ -1,5 +1,6 @@
 package com.footballio;
 
+import android.app.Application;
 import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.pm.PackageInfo;
@@ -13,10 +14,11 @@ import com.footballio.network.InternetUtil;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.analytics.FirebaseAnalytics;
 
+import dagger.hilt.android.HiltAndroidApp;
 
 
-public class Application extends Application {
-
+@HiltAndroidApp
+public class FootballApplication extends Application {
     private static Context mContext;
     private String deviceId = "";
     private String deviceType = "";
@@ -38,15 +40,15 @@ public class Application extends Application {
       /*  FacebookSdk.sdkInitialize(getApplicationContext());
         AppEventsLogger.activateApp(this);*/
 
-        FirebaseApp.initializeApp(this);
-        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+        //FirebaseApp.initializeApp(this);
+        //mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
 
         // Initialize the Shared Preferences class
-        new Prefs.Builder().setContext(this)
-                .setMode(ContextWrapper.MODE_PRIVATE)
-                .setPrefsName(getPackageName())
-                .setUseDefaultSharedPreference(true).build();
+//        new Prefs.Builder().setContext(this)
+//                .setMode(ContextWrapper.MODE_PRIVATE)
+//                .setPrefsName(getPackageName())
+//                .setUseDefaultSharedPreference(true).build();
 
         InternetUtil.init(this);
 
@@ -54,9 +56,9 @@ public class Application extends Application {
     }
 
 
-    public static Application instance() {
+    public static FootballApplication instance() {
 
-        return (Application) mContext.getApplicationContext();
+        return (FootballApplication) mContext.getApplicationContext();
     }
 
     public static boolean isNetworkAvailable() {
@@ -94,7 +96,7 @@ public class Application extends Application {
     public String getVersion() {
         PackageInfo pInfo = null;
         try {
-            pInfo = Application.instance().getPackageManager().getPackageInfo(Application.instance().getPackageName(), 0);
+            pInfo = FootballApplication.instance().getPackageManager().getPackageInfo(FootballApplication.instance().getPackageName(), 0);
             return pInfo.versionName;
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
@@ -103,13 +105,13 @@ public class Application extends Application {
     }
 
     public int getDp(int pixel) {
-        float density = Application.instance().getResources().getDisplayMetrics().density;
+        float density = FootballApplication.instance().getResources().getDisplayMetrics().density;
         float dp = pixel / density;
         return (int) dp;
     }
 
     public int getPixel(int dp) {
-        float density = Application.instance().getResources().getDisplayMetrics().density;
+        float density = FootballApplication.instance().getResources().getDisplayMetrics().density;
         float px = dp * density;
         return (int) px;
     }

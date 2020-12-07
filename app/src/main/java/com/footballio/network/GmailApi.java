@@ -1,4 +1,4 @@
-package com.footballio.retrofit;
+package com.footballio.network;
 
 import android.content.Context;
 

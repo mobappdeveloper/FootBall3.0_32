@@ -1,17 +1,39 @@
 package com.footballio.model.dashboard;
 
-public class Response {
+import java.util.List;
+
+public class MyResponse {
     public String getStatus() {
         return status;
     }
 
-    public String getData() {
-        return Data;
-    }
-
     public String getMessage() {
-        return message;
+        return msg;
     }
 
-    String status,Data,message;
+
+
+    public String getMsg() {
+        return msg;
+    }
+
+    public String getFilelocation() {
+        return filelocation;
+    }
+
+    public String getSize() {
+        return size;
+    }
+
+    public List<MyResponse> getData() {
+        return data;
+    }
+
+
+
+    private String status;
+    private List<MyResponse> data;
+    private String filelocation;
+    private String size;
+    private String msg;
 }

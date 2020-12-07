@@ -1,6 +1,219 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<layout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_login"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/ll_part1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/img_logo_login"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/logo" />
+
+                    <TextView
+                        android:id="@+id/txt_login_fb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:gravity="center"
+                        android:text="@string/app_name"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="25sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="50dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txt_login_improve"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:layout_marginTop="10dp"
+                            android:shadowColor="@color/bright_turquoise"
+                            android:shadowRadius="50"
+                            android:text="@string/login_txt_h1"
+                            android:textColor="@color/bright_turquoise"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/txt_login_training"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/login_txt_h2"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/custom_button_login"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/img_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingTop="5dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_login_email" />
+
+                        <TextView
+                            android:id="@+id/txt_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:autoSizeMaxTextSize="20sp"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:gravity="center"
+                            android:text="E-MAIL3"
+                            android:textColor="@color/bright_turquoise"
+                            android:textSize="13sp" />
+
+
+                        <com.facebook.login.widget.LoginButton
+                            android:id="@+id/loginbutton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/layout_h4"
+                            android:layout_marginRight="@dimen/layout_h4"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout_fb"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/custom_button_login"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/img_login_fbook"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="17dp"
+                            android:padding="10dp"
+                            android:scaleType="center"
+                            android:src="@drawable/ic_login_fbook" />
+
+                        <TextView
+                            android:id="@+id/txt_login_fbook"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:autoSizeMaxTextSize="20sp"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:gravity="center"
+                            android:text="FACEBOOK"
+                            android:textColor="@color/bright_turquoise"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout_gmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/custom_button_login"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/img_login_gmail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_login_gmail" />
+
+                        <TextView
+                            android:id="@+id/txt_login_gmail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:autoSizeMaxTextSize="20sp"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:gravity="center"
+                            android:text="GOOGLE"
+                            android:textColor="@color/bright_turquoise"
+                            android:textSize="13sp" />
+
+                        <com.google.android.gms.common.SignInButton
+                            android:id="@+id/sign_in_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/layout_h4"
+                            android:layout_marginRight="@dimen/layout_h4"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <data>
+
+        <variable
+            name="login"
+            type="com.footballio.viewmodel.LoginViewModel" />
+    </data>
+</layout>

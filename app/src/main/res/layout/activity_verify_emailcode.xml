@@ -1,6 +1,219 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_app">
+
+        <Button
+            android:id="@+id/butt_verifyemail_validate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_verifycode_resend"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/custom_button_splash"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Weiter"
+            android:textColor="@color/colorWhite" />
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout_verifyemailcode"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/etx_verifyemailcode_c1"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/custom_button_elogin"
+                android:ems="10"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:inputType="number"
+                android:text="" />
+
+            <EditText
+                android:id="@+id/etx_verifyemailcode_c2"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/custom_button_elogin"
+                android:ems="10"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:inputType="number"
+                android:text="" />
+
+            <EditText
+                android:id="@+id/etx_verifyemailcode_c3"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/custom_button_elogin"
+                android:ems="10"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:inputType="number"
+                android:text="" />
+
+            <EditText
+                android:id="@+id/etx_verifyemailcode_c4"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/custom_button_elogin"
+                android:ems="10"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:inputType="number"
+                android:text="" />
+
+            <EditText
+                android:id="@+id/etx_verifyemailcode_c5"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/custom_button_elogin"
+                android:ems="10"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:inputType="number"
+                android:text="" />
+
+            <EditText
+                android:id="@+id/etx_verifyemailcode_c6"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/custom_button_elogin"
+                android:ems="10"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:inputType="number"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_verifyemailcode_passwordGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="invisible"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_button_elogin"
+                android:elevation="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="New Password *"
+                    android:textColor="@color/hitGray"
+                    android:textSize="10sp"></TextView>
+
+                <EditText
+                    android:id="@+id/etxt_include_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@null"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:inputType="textPassword"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="13sp"></EditText>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <ProgressBar
+            android:id="@+id/progressBa_verifyemailcode"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_centerInParent="true" />
+
+
+        <TextView
+            android:id="@+id/txt_verifycode_dnrcode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayout_verifyemailcode"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Did not receive code?"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/txt_verifycode_resend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_verifycode_dnrcode"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/verifycodde_txt_resencode"
+            android:textColor="@color/dodger_blue" />
+
+
+        <TextView
+            android:id="@+id/txt_verifycode_attributeheader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/linearLayout_verifyemailcode"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="Please insert your verification code.\n we send it to you via Email."
+            android:textColor="@color/colorWhite"
+            android:textSize="13sp" />
+
+
+        <TextView
+            android:id="@+id/txt_verifycode_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Verifizierung"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@color/colorWhite" />
+
+
+    </RelativeLayout>
+
+    <data>
+
+        <variable
+            name="verifyemailcode"
+            type="com.footballio.viewmodel.LoginViewModel" />
+    </data>
+
+
+</layout>

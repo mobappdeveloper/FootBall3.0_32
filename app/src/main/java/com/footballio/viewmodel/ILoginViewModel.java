@@ -1,8 +1,4 @@
 package com.footballio.viewmodel;
 
-import androidx.lifecycle.LiveData;
-
-public interface ILogin {
-
-    LiveData<String> doLogin();
+public interface ILoginViewModel extends ILogin, SocialLogin {
 }

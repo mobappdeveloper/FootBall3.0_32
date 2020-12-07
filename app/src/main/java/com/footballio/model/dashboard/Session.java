@@ -1,4 +1,4 @@
-package com.footballio.model.login.dashboard;
+package com.footballio.model.dashboard;
 
 public class Session {
     private int id;

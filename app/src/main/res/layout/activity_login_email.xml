@@ -1,6 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<layout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <data>
+        <variable
+            name="emaillogin"
+            type="com.footballio.viewmodel.LoginViewModel" />
+    </data>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_app">
+
+        <ProgressBar
+            android:id="@+id/progressBar_elogin"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/colorWhite"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-350dp"
+            />
+
+        <LinearLayout
+            android:id="@+id/linearLayout_elogin_email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:elevation="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/custom_button_elogin"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/hitGray"
+                android:fontFamily="@font/montserrat_regular"
+                android:textSize="10sp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/elogin_txt_email"></TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:textSize="13sp"
+                android:singleLine="true"
+                android:text="@={emaillogin.email}"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/colorWhite"></EditText>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@+id/linearLayout_elogin_email"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/custom_button_elogin"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/hitGray"
+                android:fontFamily="@font/montserrat_regular"
+                android:textSize="10sp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/elogin_txt_pwd"></TextView>
+
+            <EditText
+                android:id="@+id/etxt_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:inputType="textPassword"
+                android:imeOptions="actionDone"
+                android:textSize="13sp"
+                android:text="@={emaillogin.password}"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/colorWhite"></EditText>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_emailLogin_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/elogin_txt_login"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/txt_elogin_fp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/elogin_txt_fp"
+            android:padding="8dp"
+            android:gravity="end"
+            android:textSize="13sp"
+            android:layout_marginTop="5dp"
+            android:layout_alignEnd="@id/linearLayout_pwd"
+            android:layout_below="@+id/linearLayout_pwd"
+            android:textColor="@color/colorWhite" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="40dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/but_elogin_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/elogin_txt_login"
+                android:textAllCaps="false"
+                android:onClick="@{()->emaillogin.onLoginButtonClick()}"
+                android:background="@drawable/custom_button_splash"
+                android:textColor="@color/colorWhite"
+                ></Button>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_elogin_noaccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="12sp"
+
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="@string/elogin_txt_noaccount"></TextView>
+
+                <TextView
+                    android:id="@+id/txt_elogin_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="12sp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:gravity="center"
+                    android:text="@string/elogin_txt_register"></TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>

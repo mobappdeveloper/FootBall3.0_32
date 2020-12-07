@@ -1,4 +1,4 @@
-package com.footballio.view;
+package com.footballio.view.callback;
 
 public interface IProgressBar {
 

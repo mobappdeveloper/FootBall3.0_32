@@ -1,4 +1,4 @@
-package com.footballio.retrofit;
+package com.footballio.network;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -6,6 +6,7 @@ import android.util.Log;
 import com.facebook.AccessToken;
 import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
+import com.footballio.Utils.AppConst;
 import com.footballio.Utils.Utils;
 import com.footballio.model.login.User;
 import com.footballio.viewmodel.LoginViewModel;
@@ -13,12 +14,22 @@ import com.footballio.viewmodel.LoginViewModel;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import androidx.lifecycle.MutableLiveData;
+
 public class FacebookApi {
     private static final String TAG = FacebookApi.class.getSimpleName();
-    private User user;
+    private static FacebookApi facebookApi = null;
+    private User user = null;
 
-    public void getUserProfile(AccessToken currentAccessToken) {
 
+    public static FacebookApi getInstance() {
+        if (facebookApi == null) {
+            facebookApi = new FacebookApi();
+        }
+        return facebookApi;
+    }
+
+    public User getUserProfile(AccessToken currentAccessToken, MutableLiveData<String> showError, MutableLiveData<User> userMutableLiveData) {
         GraphRequest request = GraphRequest.newMeRequest(
                 currentAccessToken, new GraphRequest.GraphJSONObjectCallback() {
                     @Override
@@ -30,10 +41,12 @@ public class FacebookApi {
                             String email = object.getString("email");
                             String id = object.getString("id");
                             String image_url = "https://graph.facebook.com/" + id + "/picture?type=normal";
-                            user = new User(email, first_name, last_name, email, id, "fb", image_url, "true", "d2", "", Utils.CurrentDate());
-                            LoginViewModel.userMutableLiveData.postValue(user);
+                            user = new User(email, first_name, last_name, email, id, AppConst.LOGIN_TYPE_FB, image_url, "true", "d2", "", Utils.CurrentDate());
+                            //LoginViewModel.fbUser.postValue(user);
+                            userMutableLiveData.postValue(user);
                         } catch (JSONException e) {
                             e.printStackTrace();
+                            showError.postValue(e.getMessage());
                         }
 
                     }
@@ -41,13 +54,12 @@ public class FacebookApi {
         request.setParameters(getQueryParameters());
         request.executeAsync();
 
-        return;
+        return user;
     }
 
-    private Bundle getQueryParameters() {
+    private static Bundle getQueryParameters() {
         Bundle parameters = new Bundle();
         parameters.putString("fields", "first_name,last_name,email,id");
-
         return parameters;
     }
 }

@@ -81,7 +81,7 @@
                 android:id="@+id/txt_desc1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="shdvuhsadjbjhasbdbasdhbasdbhjasbdjkasbdjasbdjasbdjiasbdjasbdjabsdjbasjdbjasbdkjbasdbjkasbjkasbdkjbdajksbdkjasbdkjasbdkjasbdjkasbdjkbaskjdbasjdbdsafsdfsdfsdfsdfdssddfgdfgfdgdfgdfgdfgdfgfdgfdgdfgdfgdfgfdfdgdfgdfgdfgdfgdfgdfgdfdfgf"
+                android:text=""
                 android:textSize="12dp"
                 android:gravity="start"
                 android:paddingTop="16dp"
@@ -97,7 +97,6 @@
                 android:text="jetzt anzeigen"
                 android:textSize="10dp"
                 android:gravity="center"
-                android:background="@drawable/textview_btn"
                 android:textColor="@color/colorWhite"
                 android:fontFamily="@font/fira_sans_medium"/>
         </LinearLayout>

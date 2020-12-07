@@ -1,14 +1,18 @@
-package com.footballio.view;
+package com.footballio.view.ui;
 
 import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
+import android.widget.TextView;
 
 import com.footballio.R;
 import com.footballio.Utils.Utils;
 import com.footballio.databinding.ActivityRegistrationBinding;
 import com.footballio.model.login.User;
+import com.footballio.view.callback.IProgressBar;
 import com.footballio.viewmodel.LoginViewModel;
 
 import androidx.annotation.Nullable;
@@ -17,32 +21,52 @@ import androidx.core.content.ContextCompat;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import dagger.hilt.android.AndroidEntryPoint;
 
+@AndroidEntryPoint
 public class RegisterActivity extends AppCompatActivity implements IProgressBar {
     private ActivityRegistrationBinding registrationBinding;
     private LoginViewModel register;
-
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        registrationBinding = DataBindingUtil.setContentView(this, R.layout.activity_registration);
+        init();
+
+        registrationBinding.etxtRegisterPwd.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_DONE) {
+                    // Do you job here which you want to done through event
+                    register.onRegisterButtonClick();
+                }
+                return false;
+            }
+        });
+    }
+
+    private void init() {
+        createViews();
+        createRegistration();
+    }
+
+    private void createViews() {registrationBinding = DataBindingUtil.setContentView(this, R.layout.activity_registration);
         register = new ViewModelProvider(this).get(LoginViewModel.class);
         registrationBinding.setRegister(register);
         registrationBinding.setLifecycleOwner(this);
         register.iProgressBar = this;
-        createRegistration();
+        register.initRegisterLiveData();
+
     }
 
     private void createRegistration() {
-
-        register.getErrorMessage().observe(this, new Observer<String>() {
+        register.getErrorResponse().observe(this, new Observer<String>() {
             @Override
             public void onChanged(String s) {
                 Utils.showToast(s, RegisterActivity.this);
                 hideProgressBar();
             }
         });
-        register.getSuccessMessage().observe(this, new Observer<User>() {
+        register.getSuccessResponse().observe(this, new Observer<User>() {
             @Override
             public void onChanged(User user) {
                 Utils.showToast(user.getResponse(), RegisterActivity.this);
@@ -53,6 +77,8 @@ public class RegisterActivity extends AppCompatActivity implements IProgressBar 
                         .putExtra("email", user.getEmailAddress()));
             }
         });
+
+
     }
 
 
@@ -71,8 +97,8 @@ public class RegisterActivity extends AppCompatActivity implements IProgressBar 
     @Override
     protected void onStop() {
         super.onStop();
-        register.getErrorMessage().removeObservers(this);
-        register.getSuccessMessage().removeObservers(this);
+        register.getErrorResponse().removeObservers(this);
+        register.getSuccessResponse().removeObservers(this);
     }
 
 
