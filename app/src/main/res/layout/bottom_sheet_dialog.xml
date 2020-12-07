@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/play"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:onClick="play"
+        android:padding="10dp"
+        android:text="PLAY"
+        android:textColor="@color/colorBlack"></TextView>
+
+    <TextView
+        android:id="@+id/pause"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:onClick="pause"
+        android:padding="10dp"
+        android:text="PAUSE"
+        android:textColor="@color/colorBlack"></TextView>
+
+
+    <TextView
+        android:id="@+id/skip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:onClick="skip"
+        android:padding="10dp"
+        android:text="SKIP"
+        android:textColor="@color/colorBlack"></TextView>
+
+</LinearLayout>

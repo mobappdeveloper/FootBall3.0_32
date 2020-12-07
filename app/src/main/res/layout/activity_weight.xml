@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_app"
+    tools:context=".view.ui.DOBActivity">
+
+
+    <Button
+        android:id="@+id/butt_weight_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/colorWhite"
+        android:fontFamily="@font/montserrat_bold"
+        android:textAllCaps="false"
+        android:background="@drawable/custom_button_splash"
+        android:text="@string/txt_next"></Button>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_back_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="7dp"
+            android:layout_gravity="start|center"
+            android:layout_marginLeft="5dp"
+            android:src="?attr/homeAsUpIndicator"
+            android:tint="@color/colorWhite"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Was ist dein Geschlecht?"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:textColor="@color/colorWhite"></TextView>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_dob_picker"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_above="@+id/butt_dob_next"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/custom_picker"
+        android:orientation="horizontal">
+
+        <com.bruce.pickerview.LoopView
+            android:id="@+id/loop_view_weight"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:canLoop="true"
+            app:centerTextColor="@color/colorWhite"
+            app:drawItemCount="7"
+            app:initPosition="3"
+            android:padding="10dp"
+            android:layout_weight="1"
+            app:lineColor="@color/colorPrimary"
+            app:textSize="25sp"
+            app:topBottomTextColor="#ffafafaf" />
+
+        <com.bruce.pickerview.LoopView
+            android:id="@+id/loop_view_weight_measurement"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:canLoop="true"
+            app:centerTextColor="@color/colorWhite"
+            app:drawItemCount="7"
+            app:initPosition="3"
+            android:layout_weight="1"
+            app:lineColor="@color/colorPrimary"
+            app:textSize="25sp"
+            app:topBottomTextColor="#ffafafaf" />
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</RelativeLayout>

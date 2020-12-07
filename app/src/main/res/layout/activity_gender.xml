@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_app">
+
+    <Button
+        android:id="@+id/butt_gender_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/montserrat_bold"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/custom_button_splash"
+        android:text="@string/txt_next"></Button>
+
+    <LinearLayout
+        android:id="@+id/ll_gender_gendertab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_gender_male"
+            android:layout_width="80dp"
+            android:layout_height="150dp"
+            android:layout_margin="10dp"
+            android:scaleType="centerInside"
+            android:tint="@color/doveGray"
+            android:background="@drawable/custom_button_login"
+            android:src="@drawable/ic_male"></ImageView>
+
+        <FrameLayout
+            android:layout_width="80dp"
+            android:layout_height="150dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/custom_button_login">
+
+        <ImageView
+            android:id="@+id/img_gender_female"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:tint="@color/doveGray"
+            android:src="@drawable/ic_female"></ImageView>
+        </FrameLayout>
+        <ImageView
+            android:id="@+id/img_gender_other"
+            android:layout_width="80dp"
+            android:layout_height="150dp"
+            android:layout_margin="10dp"
+            android:scaleType="centerInside"
+            android:tint="@color/doveGray"
+            android:background="@drawable/custom_button_login"
+            android:src="@drawable/ic_transgender"></ImageView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_gender_gender_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_gender_gendertab"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txt_gender_male"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/txt_male"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txt_gender_female"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/txt_female"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txt_gender_others"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/txt_other"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_gender_gender_check"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_gender_gender_description"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_gender_check_male"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:tint="@color/doveGray"
+            android:src="@drawable/ic_checkmark_circle_tarqueue"></ImageView>
+
+        <ImageView
+            android:id="@+id/img_gender_check_female"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:tint="@color/doveGray"
+            android:src="@drawable/ic_checkmark_circle_tarqueue"></ImageView>
+
+        <ImageView
+            android:id="@+id/img_gender_check_other"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:tint="@color/doveGray"
+            android:src="@drawable/ic_checkmark_circle_tarqueue"></ImageView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/com_facebook_button_like_icon_selected"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Was ist dein Geschlecht?"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:textColor="@color/colorWhite"></TextView>
+    </LinearLayout>
+
+</RelativeLayout>

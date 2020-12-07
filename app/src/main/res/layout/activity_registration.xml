@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="register"
+            type="com.footballio.viewmodel.LoginViewModel" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/root_registration_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_app"
+        android:orientation="vertical">
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="Registrieren"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/colorWhite" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_button_elogin"
+                android:elevation="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="Name *"
+                    android:textColor="@color/hitGray"
+                    android:textSize="10sp"></TextView>
+
+                <EditText
+                    android:id="@+id/etxt_register_fname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:text="@={register.firstName_register}"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="13sp"></EditText>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_button_elogin"
+                android:elevation="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="Surname"
+                    android:textColor="@color/hitGray"
+                    android:textSize="10sp"></TextView>
+
+                <EditText
+                    android:id="@+id/etxt_register_lname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:text="@={register.lastName_register}"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="13sp"></EditText>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_button_elogin"
+                android:elevation="20dp"
+                android:orientation="vertical">
+
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="Username *"
+                    android:textColor="@color/hitGray"
+                    android:textSize="10sp"></TextView>
+
+                <EditText
+                    android:id="@+id/etxt_register_uname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:text="@={register.userName_register}"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="13sp"></EditText>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_button_elogin"
+                android:elevation="20dp"
+                android:orientation="vertical">
+
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="Email address *"
+                    android:textColor="@color/hitGray"
+                    android:textSize="10sp"></TextView>
+
+                <EditText
+                    android:id="@+id/etxt_register_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:text="@={register.email_register}"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="13sp"></EditText>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_button_elogin"
+                android:elevation="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="Phone number"
+                    android:textColor="@color/hitGray"
+                    android:textSize="10sp"></TextView>
+
+                <EditText
+                    android:id="@+id/etxt_register_phoneno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@null"
+                    android:inputType="phone"
+                    android:singleLine="true"
+                    android:text="@={register.phoneNo_register}"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="13sp"></EditText>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_button_elogin"
+                android:elevation="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="Password *"
+                    android:textColor="@color/hitGray"
+                    android:textSize="10sp"></TextView>
+
+                <EditText
+                    android:id="@+id/etxt_register_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:imeOptions="actionDone"
+                    android:text="@={register.password_register}"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:inputType="textPassword"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="13sp"></EditText>
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/button_register_save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="25dp"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:layout_marginTop="20dp"
+                android:onClick="@{()-> register.onRegisterButtonClick()}"
+                android:background="@drawable/custom_button_splash"
+                android:text="Weiter" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:layout_marginBottom="50dp"
+                android:text="By registering you agree to Terms and Conditions \n and Privacy Policy of the Wealth24"
+                android:textColor="@color/colorWhite"
+                android:textSize="10sp"></TextView>
+
+
+            <ProgressBar
+            android:id="@+id/progressBar_registration"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:indeterminateTint="@color/colorWhite"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-350dp"
+            />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+    </LinearLayout>
+</layout>
+
+

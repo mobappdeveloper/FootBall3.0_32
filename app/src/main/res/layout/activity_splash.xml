@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ic_splash_bg">
+    android:background="@drawable/bg_app"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,53 +14,44 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="100dp">
+            android:layout_marginTop="100dp"
+            android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/fb_splash_logo"
                 android:layout_width="180dp"
                 android:layout_height="180dp"
                 android:layout_gravity="center"
-                android:src="@drawable/ic_logo"/>
+                android:src="@mipmap/ic_splash" />
 
             <TextView
-                android:id="@+id/fb_splash_tv"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="FOOTBALL 3.0"
-                android:textSize="30dp"
                 android:layout_margin="16dp"
-                android:textColor="@color/colorWhite"
+                android:text="@string/app_name"
                 android:textAlignment="center"
-                app:fontFamily="@font/fira_sans_bold" />
-
-
+                android:textColor="@color/colorWhite"
+                android:textSize="30dp"
+                app:fontFamily="@font/montserrat_regular" />
 
 
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dip"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/layout_h4"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="vertical" >
-            <ProgressBar
-                android:id="@+id/fb_splash_progress"
-                android:layout_width="200dp"
-                android:layout_height="20dp"
-                android:progressTint="@color/colorMajor"
-                style="?android:attr/progressBarStyleHorizontal"/>
-        </LinearLayout>
-
-
-
-
     </LinearLayout>
 
 
-
-</LinearLayout>
+    <Button
+        android:id="@+id/butt_getStarted"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_button_splash"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/splash_button_name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="bottom"
+        android:textAllCaps="false"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/colorWhite"
+        android:layout_marginBottom="20dp"
+        android:textStyle="bold"></Button>
+</RelativeLayout>

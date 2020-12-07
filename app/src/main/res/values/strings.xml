@@ -1,13 +1,44 @@
 <resources>
-    <string name="app_name">Football 3.0</string>
+    <string name="app_name">FOOTBALL 3.0</string>
 
     <string name="store_name" translatable="false">My Online Store</string>
     <string name="googlepay_status_unavailable" translatable="false">Unfortunately, Google Pay is not available on this phone.</string>
     <string name="googlepay_status_checking" translatable="false">Checking if Google Pay is available...</string>
     <string name="payments_show_name" translatable="false">Successfully received payment data for %s!</string>
 
+    // FB STRINGS
     <string name="facebook_app_id">469948640547161</string>
     <string name="fb_login_protocol_scheme">fb469948640547161</string>
 
     <string name="server_client_id">272004924452-uruk80du40sea9e3n1dd2dhbrjr4p2ps.apps.googleusercontent.com</string>
+
+    <string name="splash_button_name">Get started</string>
+    <string name="login_txt_h1">IMPROVE. EVERYDAY. EVERYWHERE </string>
+    <string name="login_txt_h2">Save your progress to access your personal \n Training program!</string>
+    <string name="elogin_txt_email">Email ID</string>
+    <string name="elogin_txt_pwd">Password</string>
+    <string name="elogin_txt_fp">Forgot Password?</string>
+    <string name="elogin_txt_noaccount">You have no account?</string>
+    <string name="elogin_txt_register">Register Now</string>
+    <string name="elogin_txt_login">Login</string>
+    <string name="elogin_txt_verify">Verify</string>
+    <string name="txt_next">Weiter</string>
+    <string name="txt_male">Mannlich</string>
+    <string name="txt_female">Weiblich</string>
+    <string name="txt_other">Divers</string>
+
+
+    <string name="verifycodde_txt_resencode"><u>Resend Code</u></string>
+    <string name="title_activity_user_login">UserLoginActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="Speichern">Speichern</string>
+
+
 </resources>

@@ -25,7 +25,24 @@
     <color name="colorGreen">#00FF00</color>
     <color name="colorRed">#E22123</color>
     <color name="co1lorRed">#727272</color>
-    <color name="transparent">#00000000</color>
     <color name="text_highlight">#00FE7F</color>
     <color name="bg_comm_btn">#454D62</color>
+
+    // VERSION CODE 33
+    <color name="bright_turquoise">#00F2D9</color>
+    <color name="dodger_blue">#1FBAFD</color>
+    <color name="william">#3A5B6F</color>
+    <color name="hitGray">#ABB4BD</color>
+    <color name="transparent">#66000000</color>
+    <color name="doveGray">#707070</color>
+
+    <color name="tarqueue">#29F2D9</color>
+    <color name="yellow">#FEB92B</color>
+    <color name="red">#E8505B</color>
+    <color name="blue">#1FBAFD</color>
+    <color name="brown">#FD5E1F</color>
+    <color name="violet">#B758FC</color>
+
+
+
 </resources>

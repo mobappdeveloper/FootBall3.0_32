@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_app">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/ll_club_h1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_back_cda"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:tint="@color/colorWhite"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="start|center"
+                    android:src="?attr/homeAsUpIndicator"
+                    ></ImageView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="In welchem Vereln blst du?"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp"></TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_club_h1"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/etxt_club_society"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/custom_button_elogin"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:hint="Verein"
+                    android:padding="10dp"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorWhite"
+                    android:textSize="13sp"></EditText>
+
+                <EditText
+                    android:id="@+id/etxt_club_position"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/custom_button_elogin"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:hint="Position"
+                    android:layout_marginTop="5dp"
+                    android:padding="10dp"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorWhite"
+                    android:textSize="13sp"></EditText>
+
+                <RadioButton
+                    android:id="@+id/rbutton_club_isClub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:button="@drawable/ic_check_square"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Ich spiele in keinem Verein"
+                    android:textColor="@color/colorWhite"></RadioButton>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Wer ist dein Lieblingsspieler?"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp"></TextView>
+
+                <EditText
+                    android:id="@+id/etxt_club_favouritePlayer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_button_elogin"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="center"
+                    android:hint="Lionel Messi"
+                    android:padding="10dp"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorWhite"
+                    android:textSize="13sp"></EditText>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Welche Nationalitat hast du?"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp"></TextView>
+
+
+                <EditText
+                    android:id="@+id/etxt_club_clubname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_button_elogin"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="center"
+                    android:hint="FC Bayern München"
+                    android:padding="10dp"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorWhite"
+                    android:textSize="13sp"></EditText>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/butt_club_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/custom_button_splash"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/txt_next"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"></Button>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

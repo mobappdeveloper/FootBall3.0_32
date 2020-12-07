@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/expandable_listView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/custom_button_elogin"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+       >
+
+
+        <TextView
+            android:id="@+id/listTitle"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="TITLE"
+            android:textColor="@color/colorWhite"
+            android:textSize="15sp" />
+
+        <!--<TextView
+            android:id="@+id/list_subTitle"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="start|center"
+            android:padding="10dp"
+            android:text=""
+            android:textColor="@color/colorWhite"
+            android:textSize="10sp" />-->
+
+        <ImageView
+            android:id="@+id/img_switch"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="end|center"
+            android:layout_weight="1"
+            android:src="@drawable/ic_check_horizontal"></ImageView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/listview_expand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"></LinearLayout>
+</LinearLayout>
