@@ -55,8 +55,9 @@ public class ProfileRepository {
                 public void onResponse(Call<User> call, Response<User> response) {
                     if (response.isSuccessful() && response.body().getStatus().equals("true")) {
                         success.setValue(response.body());
-                    } else {
-                        error.setValue("Invalid Password");
+                    }
+                    else {
+                        success.setValue(null);
                     }
                 }
 

@@ -26,6 +26,7 @@ import okhttp3.RequestBody;
 public class ProfileViewModel extends ViewModel {
 
     private MutableLiveData<User> userLiveData = new MutableLiveData<>();
+    private MutableLiveData<User> verifyPwdLiveData = new MutableLiveData<>();
     private MutableLiveData<String> error = new MutableLiveData<>();
     private MutableLiveData<String> pwdLiveData = new MutableLiveData<>();
     private MutableLiveData<MyResponse> responseLiveData = new MutableLiveData<>();
@@ -40,6 +41,11 @@ public class ProfileViewModel extends ViewModel {
         this.savedStateHandle = savedStateHandle;
     }
 
+    public LiveData<User> verifyCredentialObserver() {
+
+        return verifyPwdLiveData;
+
+    }
 
     public LiveData<User> getUserInfo() {
         repository.getUserPersonalInfo(AppSession.getLastLoginUserId(application), error, userLiveData);
@@ -50,9 +56,8 @@ public class ProfileViewModel extends ViewModel {
         return error;
     }
 
-    public LiveData<User> verifyCredential(String value, String pwd) {
-        repository.verifyCredentail(AppSession.getStringValue(application, value), pwd, error, userLiveData);
-        return userLiveData;
+    public void verifyCredential(String value, String pwd) {
+        repository.verifyCredentail(AppSession.getStringValue(application, value), pwd, error, verifyPwdLiveData);
     }
 
     public LiveData<String> updateUserPassword(String pwd) {
@@ -65,7 +70,7 @@ public class ProfileViewModel extends ViewModel {
         File file = new File(resultUri.getPath());
         RequestBody userId = RequestBody.create(okhttp3.MultipartBody.FORM, AppSession.getLastLoginUserId(application) + "");
         RequestBody requestFile = RequestBody.create(MediaType.parse(application.getContentResolver().getType(outputFileUri)), file);
-        MultipartBody.Part profilePic = MultipartBody.Part.createFormData("profilePic", file.getName(), requestFile);
+        MultipartBody.Part profilePic = MultipartBody.Part.createFormData("file", file.getName(), requestFile);
         repository.updateProfilePic(userId, profilePic, error,responseLiveData);
         return responseLiveData;
 
@@ -100,6 +105,7 @@ public class ProfileViewModel extends ViewModel {
         return bytes;
 
     }
+
 
 
 }

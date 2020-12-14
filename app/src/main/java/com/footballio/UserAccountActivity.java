@@ -30,6 +30,7 @@ public class UserAccountActivity extends AppCompatActivity {
     private UserAccountAdapter accountAdapter;
     private ProfileViewModel profileModel;
     private String[] values = new String[]{"Name", "Vorname", "Username", "E-Mail", "Passwort ändern"};
+    private int i = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +56,21 @@ public class UserAccountActivity extends AppCompatActivity {
                     alertPasswordDialog();
                 }
 
+            }
+        });
+        initObservers();
+    }
+
+    private void initObservers() {
+        profileModel.verifyCredentialObserver().observe(this, new Observer<User>() {
+            @Override
+            public void onChanged(User user) {
+                if (user != null) {
+                    startActivity(new Intent(UserAccountActivity.this, PasswordActivity.class));
+                } else {
+                    Utils.showToast("Invalid Password:" + i, UserAccountActivity.this);
+                }
+                i++;
             }
         });
     }
@@ -89,18 +105,15 @@ public class UserAccountActivity extends AppCompatActivity {
     }
 
     private void verifyCredential(String pwd) {
-        profileModel.verifyCredential(values[3], pwd).observe(this, new Observer<User>() {
-            @Override
-            public void onChanged(User user) {
-                startActivity(new Intent(UserAccountActivity.this, PasswordActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
-            }
-        });
+        profileModel.verifyCredential(values[3], pwd);
 
-        profileModel.getErrorResponse().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(String s) {
-                Utils.showToast(s, UserAccountActivity.this);
-            }
-        });
+//        profileModel.getErrorResponse().observe(this, new Observer<String>() {
+//            @Override
+//            public void onChanged(String s) {
+//
+//            }
+//        });
     }
+
+
 }
